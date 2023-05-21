@@ -6,8 +6,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 # opens text file - reads it - coverst to lower
-# f = open('corpus.txt', 'r', errors='ignore')
-f = open('law.txt', 'r', errors='ignore')
+f = open('corpus.txt', 'r', errors='ignore')
 raw = f.read()
 
 raw = raw.lower()
