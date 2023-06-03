@@ -36,8 +36,8 @@ def LemNormalize(text):
 
 
 # keyword matching
-GREETING_INPUTS = ('hello', 'hi', 'greetings', 'sup', "what's up", 'hey')
-GREETING_RESPONSES = ['Hi', 'Hey', '*nods*', 'Hi there', 'Hello']
+GREETING_INPUTS = ('hello', 'greetings', 'sup', 'hey')
+GREETING_RESPONSES = ['Hi', 'Hey', '👋', 'Hi there', 'Hello']
 
 
 def greeting(sentence):
@@ -70,7 +70,7 @@ def response(user_response):
 
 
 flag = True
-print("CHITTI: My name is Chitti. I will answer your queries about Chatbots.")
+print("BOT: Hello 👋. how are you doing.")
 
 while (flag == True):
     user_response = input()
@@ -78,17 +78,19 @@ while (flag == True):
     if (user_response != 'bye'):
         if (user_response == 'thanks' or user_response == 'thank you'):
             flag = False
-            print("CHITTI: You are welcome 😊")
+            print("BOT: You are welcome 😊")
 
         else:
             if (greeting(user_response) != None):
-                print(f'Chitti: {greeting(user_response)}')
+                print(f'BOT: {greeting(user_response)}')
+                print('--------------------------------------')
 
             else:
-                print('CHITTI: ', end='')
+                print('BOT: ', end='')
                 print(response(user_response))
                 sentence_tokens.remove(user_response)
+                print('--------------------------------------')
 
     else:
         flag = False
-        print('CHITTI: Bye! take care...')
+        print('BOT: Bye! take care...')
